@@ -1,0 +1,324 @@
+/*** ----------------------------------
+
+CUSTOM LAYOUT STYLES
+---------------------------------------
+
+filename:asset/scss/custom
+copyright:2015 Flagship 
+License:CC BY Flagship
+contact:info@weareflagship.com
+
+-------------------------------------------------------------------------- ***/
+
+/*** ----------------------------------
+
+Mobile
+
+-------------------------------------------------------------------------- ***/
+$width-name: max-width;
+$target-width-lg: 1200px;
+$target-width-md: 992px;
+$target-width-sm: 768px;
+$target-width-xs: 480px;
+
+
+@media only screen and ($width-name: $target-width-lg) {
+	.navbar-nav li{
+		padding: 0.5em 0 1em !important;
+	}
+	.vcenter {
+			left: 1em !important;
+			.lead {
+				font-size: 1.75em !important;
+			}
+		}
+}
+
+@media only screen and ($width-name: $target-width-md) {
+	.vcenter {
+		left: 0.5em !important;
+		top: 5% !important;
+		.lead {
+			font-size: 1.5em !important;
+		}
+		.btn {
+			padding: 1em 2em !important;;
+		}
+	}
+	.navbar-nav{
+		left: 1em !important;
+	}
+
+	#news {
+		text-align: center;
+		top: -13em !important;
+	}
+}
+
+@media screen and ($width-name: $target-width-sm) {
+	.vcenter {
+		top: 10% !important;
+	}
+
+}
+
+@media screen and ($width-name: $target-width-xs) {
+	.vcenter {
+		top: 0 !important;
+		.btn {
+			padding: 1em 1em !important;
+		}
+	}
+}
+
+
+/*** ----------------------------------
+
+VARIABLES
+
+-------------------------------------------------------------------------- ***/
+
+//
+// Colors
+// -----------------------------------------------------------------------------
+//
+
+$white-base: #fff !default;
+$gray-dark: #333333;
+$violet: #1e0b4c;
+$dark-blue: #0c2f42;
+$light-gray: #909090;
+$gray: #3f3f3f;
+$btn-bg: #279d89;
+$darker-blue: #213b4a; 
+$footer-bg-color: #052149;
+$support-bg-color: #EAECEB;
+$support-btn-color: #19A3AD;
+$hr-bg-color: #213B4A;
+
+//
+// Scaffolding
+// -----------------------------------------------------------------------------
+//
+
+$body-bg: $white-base !default;
+$text-color: $gray-dark !default;
+$link-color: $white-base !default;
+
+//
+// Typography
+// -----------------------------------------------------------------------------
+//
+@font-face {
+    font-family: Liberation;
+    src: url('../fonts/liberation-sans.bold.ttf');
+}
+
+$main-font-family: "Helvetica Neue";
+$headings-font-family: "Liberation";
+
+/*** ----------------------------------
+
+NAVIGATION BAR
+
+-------------------------------------------------------------------------- ***/
+.navbar {
+	height: 5em;
+	background-color: $white-base;
+}
+.navbar-header .logo {
+	font-family: $font-family-sans-serif;
+	font-size: 1.1em;
+	color: $violet;
+	font-weight: 100;
+	position: relative;
+	bottom: 1em;
+	left: 7em;
+}
+
+.navbar-toogle .icon-bar{
+	background-color: $gray !important;
+}
+
+.navbar-nav{
+  li{
+		padding: 1em 1.7em 0.4em;
+		
+		&:hover{
+			background-color: $violet !important;
+
+			a{
+				color: $white-base;
+				background-color: transparent;
+			}
+		}
+
+		a {
+			font-size: 1.2em;
+			color: $gray-dark;
+			display: block;
+		}
+	}	
+}
+
+/*** ----------------------------------
+
+HEADER
+
+-------------------------------------------------------------------------- ***/
+#banner{
+	background: url('../images/banner_image.jpg') no-repeat; 
+	background-size: cover;
+	background-size: 100% auto;
+	min-height: 400px; 
+	height: 600px;
+	position: relative;
+	top: 5em;
+	text-align: left;
+	.vcenter {
+		position: absolute;
+		top: 30%;
+		left: 2.5em;
+
+			.lead {
+				font-family: $main-font-family;
+				font-size: 3em;
+				color: $white-base;
+				line-height: normal;
+				margin-bottom: 1em;
+			}
+
+			.btn {
+				padding: 1em 6.5em;
+				background-color: transparent;
+				color: $white-base;
+				border-color: $white-base;
+				border-radius: 0;
+				&:hover {
+					background: $white-base;
+					color: $violet;
+				}
+			}
+	}
+}
+
+/*** ----------------------------------
+
+	NEWS
+
+-------------------------------------------------------------------------- ***/
+#news {
+	position: relative;
+	top: 8em;
+
+	.h3 {
+		font-family: $main-font-family;
+		font-size: 2em;
+		color: $gray-dark;
+		margin-bottom: 2em;
+	}
+
+	img {
+		clear:both;
+		display: table;
+		margin: 0 auto;
+	}
+
+	.news-date {
+		position: relative;
+		top: 1em;
+		color: $light-gray;
+		font-size: 1em;
+	}
+
+	.news-title {
+		margin-top: 2em;
+		color: $gray-dark;
+	}
+}
+
+/*** ----------------------------------
+
+	SUPPORT US
+
+-------------------------------------------------------------------------- ***/
+
+#support-us {
+	position: relative;
+	top: 10em;
+	background-color: $support-bg-color;
+
+	.h2 {
+		margin-top: 3em;
+		font-size: 2em;
+		color: $gray-dark;
+	}
+
+	.description {
+		color: $light-gray;
+		font-size: 1.5em;
+		margin-bottom: 2em;
+	}
+
+	.btn {
+		color: $white-base;
+		background-color: $support-btn-color;
+		margin-bottom: 5em;
+		padding: 1em 10em;
+		font-size: 1.2em;
+		border-radius: 0;
+	}
+}
+
+/*** ----------------------------------
+
+	FOOTER
+
+-------------------------------------------------------------------------- ***/
+#footer {
+	position: relative;
+	top: 10em;
+	background-color: $footer-bg-color;
+
+	.footer-top {
+
+		.widget {
+			margin-top: 3em;
+		}
+
+		.widget-title {
+			color: $white-base;
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		.widget-body>ul{
+			color: $light-gray;
+			list-style-type: none;
+			&>li {
+				margin-left: -2.7em;
+				font-size: 1em;
+				line-height: 1.5em;
+				color: $light-gray;
+			}
+		}
+
+		.col-md-12 {
+			border-bottom: 1px solid $hr-bg-color;
+		}
+	}
+
+	.footer-bottom {
+		margin-top: 2em;
+
+		p {
+			font-size: 1em;
+			color: $light-gray;
+			margin-bottom: 3em;
+		}
+	}
+
+}
+
+
+

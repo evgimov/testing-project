@@ -1,0 +1,1064 @@
+/*** ----------------------------------
+
+UTILITY STYLES
+---------------------------------------
+
+filename:asset/scss/includes/_utilities.css
+copyright:2014 Flagship 
+License:CC BY Flagship
+contact:info@weareflagship.com
+
+-------------------------------------------------------------------------- ***/
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+.float-none {
+   float:none;
+}
+
+
+// Centering content
+// -------------------------
+
+.flex-center,
+%flex-center {
+   display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+   display: -ms-flexbox;  /* TWEENER - IE 10 */
+   display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+   display: flex;
+   -webkit-flex-direction:column;
+   -ms-flex-direction:column;
+   flex-direction: column;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+
+}
+
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+
+/*** TEXT
+------------------------------------------------------------------------- ***/
+.f {
+   &10 {font-size: 10px;line-height: 1.2;}
+   &11 {font-size: 11px;line-height: 1.3;}
+   &12 {font-size: 12px;line-height: 1.4;}
+   &13 {font-size: 13px;line-height: 1.5;}
+   &14 {font-size: 14px;line-height: 1.5;}
+   &16 {font-size: 16px;line-height: 1.5;}
+   &18 {font-size: 18px;line-height: 1.5;}
+   &20 {font-size: 20px;line-height: 1.5;}
+   &22 {font-size: 22px;line-height: 1.5;}
+   &24 {font-size: 24px;line-height: 1;}
+   &26 {font-size: 26px;line-height: 1;}
+   &28 {font-size: 28px;line-height: 1;}
+   &30 {font-size: 30px;line-height: 1;}
+   &32 {font-size: 32px;line-height: 1;}
+   &34 {font-size: 34px;line-height: 1;}
+   &36 {font-size: 36px;line-height: 1;}
+   &38 {font-size: 38px;line-height: 1;}
+   &40 {font-size: 40px;line-height: 1;}
+   &42 {font-size: 42px;line-height: 1;}
+   &50 {font-size: 50px;line-height: 1;}
+   &58 {font-size: 58px;line-height: 1;}
+   &64 {font-size: 64px;line-height: 1;}
+   &72 {font-size: 75px;line-height: 1;}
+}
+
+.bold {
+   font-weight: 600;
+}
+
+.normal {
+   font-weight: normal;
+}
+
+.upper {
+   text-transform: uppercase;
+}
+
+.em {
+   font-style: italic;
+}
+
+.clickable {
+   cursor: pointer;
+}
+
+.un-clickable {
+   cursor: default;
+}
+
+.va-top {
+   vertical-align: top !important
+}
+
+.va-middle {
+   vertical-align: middle !important
+}
+
+.text-200 {
+   font-weight:200 !important;
+}
+
+.text-300 {
+   font-weight:300 !important;
+}
+
+.text-400 {
+   font-weight:400 !important;
+}
+
+.text-700 {
+   font-weight:700 !important;
+}
+
+.text-underline {
+   display:block-inline;
+   border-bottom-style:solid;
+   border-bottom-width:1px;
+   border-bottom-color:inherit;
+   padding-bottom:5px;
+
+}
+
+
+/*** FADED OUT HR
+------------------------------------------------------------------------- ***/
+.soften {
+   height: 1px;
+   margin: 70px 0;
+   background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.15), rgba(0,0,0,0));
+   background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.15), rgba(0,0,0,0));
+   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.15), rgba(0,0,0,0));
+   background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.15), rgba(0,0,0,0));
+   border: 0;
+}
+
+.soften.light {
+   background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,0));
+   background-image:    -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,0));
+   background-image:     -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,0));
+   background-image:      -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,.2), rgba(255,255,255,0));
+   border: 0;
+}
+
+
+/*** CLEARINGING ELEMENTS
+------------------------------------------------------------------------- ***/
+
+.clear-left {
+   clear: left;
+}
+
+.clear-right {
+   clear: right;
+}
+
+.clear-both {
+   clear: both;
+}
+
+/*** LISTS
+------------------------------------------------------------------------- ***/
+ol.list-clean, ul.list-clean {
+   margin:0;
+   padding:0;
+   list-style:none;
+}
+
+ol.list-clean > li, ul.list-clean > li {
+   margin:0;
+   padding:0;
+}
+
+ol.list-inside,  ul.list-inside {
+   list-style-position:inside;
+}
+
+
+/*** DISPLAY
+------------------------------------------------------------------------- ***/
+
+.block {
+   display: block !important;
+}
+
+.overflow {
+   overflow: visible;
+}
+
+.overflow-x {
+   overflow-x: visible;
+}
+
+.overflow-y {
+   overflow-y: visible;
+}
+
+.inline-block {
+   display: inline-block;
+   *display:inline;
+   *z-index:1 !important;
+}
+
+/*** POSITION
+------------------------------------------------------------------------- ***/
+
+.relative {
+   position: relative;
+}
+
+.absolute {
+   position: absolute;
+}
+
+.ps-table {
+   display: table;
+   float: left;
+}
+.ps-table-row {
+   display: table-row;
+}
+.ps-table-cell {
+   display: table-cell;
+}
+.middle {
+   vertical-align: middle;
+}
+.fullheight {
+   height: 100%;
+}
+.fullwidth {
+   width: 100%;
+}
+
+/*** SHADOW
+------------------------------------------------------------------------- ***/
+
+.box-shadow {
+   @include box-shadow(0 1px 3px rgba(0,0,0,.25));
+   &-light {
+      @include box-shadow(0 1px 3px rgba(0,0,0,.01));
+   }
+   &-inset {
+      @include box-shadow(0 1px 3px rgba(0,0,0,.25), inset 0px 10px 30px 0px rgba(255, 255, 255, 0.4));
+   }
+   
+}
+
+.no-shadow {
+   box-shadow: none !important;
+}
+
+
+/*** RADIUS
+------------------------------------------------------------------------- ***/
+.no-radius {
+   border-radius: 0 !important;
+}
+
+/*** OPACITY
+------------------------------------------------------------------------- ***/
+
+.opaci15 {
+   @include opacity(.15);
+}
+
+.opaci25 {
+   @include opacity(.25);
+}
+
+.opaci35 {
+   @include opacity(.35);
+}
+
+.opaci45 {
+   @include opacity(.45);
+}
+
+.opaci55 {
+   @include opacity(.55);
+}
+
+.opaci65 {
+   @include opacity(.65);
+}
+
+.opaci75 {
+   @include opacity(.75);
+}
+
+.opaci85 {
+   @include opacity(.85);
+}
+
+/*** REMOVING
+------------------------------------------------------------------------- ***/
+/* Remove Border */
+
+.no-border {
+   border: none;
+}
+
+.no-border-top {
+   border-top: none !important;
+}
+
+.no-border-right {
+   border-right: none !important;
+}
+
+.no-border-bottom {
+   border-bottom: none !important;
+}
+
+.no-border-left {
+   border-left: none !important;
+}
+
+/* Remove Background */
+
+.no-bg {
+   background: none !important;
+}
+
+/* No Wrap */
+.no-wrap {
+   white-space: nowrap;
+}
+
+.wrap-normal {
+   white-space: normal;
+}
+
+/*** CORRECTION GAP and SPACE (2px 4px 8px 16px)
+------------------------------------------------------------------------- ***/
+/* Margin */
+
+.margin-all2 {
+   margin: 2px !important;
+}
+
+.margin-all5 {
+   margin: 5px !important;
+}
+
+.margin-all10 {
+   margin: 10px !important;
+}
+
+.margin-all15 {
+   margin: 15px !important;
+}
+
+.margin-all20 {
+   margin: 20px !important;
+}
+
+.margin-all25 {
+   margin: 25px !important;
+}
+
+.margin-all30 {
+   margin: 30px !important;
+}
+
+.margin-all40 {
+   margin: 40px !important;
+}
+
+/* Margin top */
+
+.margin-top2 {
+   margin-top: 2px !important;
+}
+
+.margin-top5 {
+   margin-top: 5px !important;
+}
+
+.margin-top10 {
+   margin-top: 10px !important;
+}
+
+.margin-top15 {
+   margin-top: 15px !important;
+}
+
+.margin-top20 {
+   margin-top: 20px !important;
+}
+
+.margin-top25 {
+   margin-top: 25px !important;
+}
+
+.margin-top30 {
+   margin-top: 30px !important;
+}
+
+.margin-top40 {
+   margin-top: 40px !important;
+}
+
+/* Margin left */
+
+.margin-left2 {
+   margin-left: 2px !important;
+}
+
+.margin-left5 {
+   margin-left: 5px !important;
+}
+
+.margin-left10 {
+   margin-left: 10px !important;
+}
+
+.margin-left15 {
+   margin-left: 15px !important;
+}
+
+.margin-left20 {
+   margin-left: 20px !important;
+}
+
+.margin-left25 {
+   margin-left: 25px !important;
+}
+
+.margin-left30 {
+   margin-left: 30px !important;
+}
+
+.margin-left40 {
+   margin-left: 40px !important;
+}
+
+/* Margin bottom */
+
+.margin-bottom2 {
+   margin-bottom: 2px !important;
+}
+
+.margin-bottom5 {
+   margin-bottom: 5px !important;
+}
+
+.margin-bottom10 {
+   margin-bottom: 10px !important;
+}
+
+.margin-bottom15 {
+   margin-bottom: 15px !important;
+}
+
+.margin-bottom20 {
+   margin-bottom: 20px !important;
+}
+
+.margin-bottom25 {
+   margin-bottom: 25px !important;
+}
+
+.margin-bottom30 {
+   margin-bottom: 30px !important;
+}
+
+.margin-bottom40 {
+   margin-bottom: 40px !important;
+}
+
+/* Margin right */
+
+.margin-right2 {
+   margin-right: 2px !important;
+}
+
+.margin-right5 {
+   margin-right: 5px !important;
+}
+
+.margin-right10 {
+   margin-right: 10px !important;
+}
+
+.margin-right15 {
+   margin-right: 15px !important;
+}
+
+.margin-right20 {
+   margin-right: 20px !important;
+}
+
+.margin-right25 {
+   margin-right: 25px !important;
+}
+
+.margin-right30 {
+   margin-right: 30px !important;
+}
+
+.margin-right40 {
+   margin-right: 40px !important;
+}
+
+/* Margin Remove */
+
+.no-margin {
+   margin: 0px !important;
+}
+
+.no-margin-top {
+   margin-top: 0px !important;
+}
+
+.no-margin-left {
+   margin-left: 0px !important;
+}
+
+.no-margin-bootom {
+   margin-bottom: 0px !important;
+}
+
+.no-margin-right {
+   margin-right: 0px !important;
+}
+
+.margin-side5 {
+   margin-left: 5px;
+   margin-right: 5px;
+}
+
+.margin-side10 {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.margin-side15 {
+   margin-left: 15px;
+   margin-right: 15px;
+}
+
+.margin-side20 {
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
+.margin-btn .btn {
+   margin-bottom: 5px;
+}
+
+.margin-00 {
+   margin-top: 0 !important;
+   margin-bottom: 0 !important;
+}
+
+.margin-ss {
+   margin-top: 5px !important;
+   margin-bottom: 5px !important;
+}
+
+.margin-0s {
+   margin-top: 0 !important;
+   margin-bottom: 5px !important;
+}
+
+.margin-s0 {
+   margin-top: 5px !important;
+   margin-bottom: 0 !important;
+}
+
+.margin-mm {
+   margin-top: 10px !important;
+   margin-bottom: 10px !important;
+}
+
+.margin-0m {
+   margin-top: 0 !important;
+   margin-bottom: 10px !important;
+}
+
+.margin-m0 {
+   margin-top: 10px !important;
+   margin-bottom: 0 !important;
+}
+
+.margin-ll {
+   margin-top: 15px !important;
+   margin-bottom: 15px !important;
+}
+
+.margin-0l {
+   margin-top: 0 !important;
+   margin-bottom: 15px !important;
+}
+
+.margin-l0 {
+   margin-top: 15px !important;
+   margin-bottom: 0 !important;
+}
+
+.margin-xx {
+   margin-top: 20px !important;
+   margin-bottom: 20px !important;
+}
+
+.margin-0x {
+   margin-top: 0 !important;
+   margin-bottom: 20px !important;
+}
+
+.margin-x0 {
+   margin-top: 20px !important;
+   margin-bottom: 0 !important;
+}
+
+.margin-ms {
+   margin-top: 10px !important;
+   margin-bottom: 5px !important;
+}
+
+.margin-sm {
+   margin-top: 5px !important;
+   margin-bottom: 10px !important;
+}
+
+.margin-xm {
+   margin-top: 20px !important;
+   margin-bottom: 10px !important;
+}
+
+.margin-mx {
+   margin-top: 10px !important;
+   margin-bottom: 20px !important;
+}
+
+.margin-xs {
+   margin-top: 20px !important;
+   margin-bottom: 5px !important;
+}
+
+.margin-sx {
+   margin-top: 5px !important;
+   margin-bottom: 20px !important;
+}
+
+.margin-xxx {
+   margin-top: 40px !important;
+   margin-bottom: 40px !important;
+}
+
+
+.margin-auto {
+   margin-right:auto !important;
+   margin-left:auto !important;
+}
+
+
+/* Padding */
+
+.padding2 {
+   padding: 2px !important;
+}
+
+.padding4 {
+   padding: 4px !important;
+}
+
+.padding5 {
+   padding: 5px !important;
+}
+
+.padding6 {
+   padding: 6px !important;
+}
+
+.padding8 {
+   padding: 8px !important;
+}
+
+.padding10 {
+   padding: 10px !important;
+}
+
+.padding15 {
+   padding: 15px !important;
+}
+
+.padding20 {
+   padding: 20px !important;
+}
+
+.padding25 {
+   padding: 25px !important;
+}
+
+.padding30 {
+   padding: 30px !important;
+}
+
+.padding35 {
+   padding: 35px !important;
+}
+
+.padding40 {
+   padding: 40px !important;
+}
+
+.padding45 {
+   padding: 45px !important;
+}
+
+
+/* Padding top */
+
+.padding-top2 {
+   padding-top: 2px !important;
+}
+
+.padding-top3 {
+   padding-top: 3px !important;
+}
+
+.padding-top5 {
+   padding-top: 5px !important;
+}
+
+.padding-top10 {
+   padding-top: 10px !important;
+}
+
+.padding-top15 {
+   padding-top: 15px !important;
+}
+
+.padding-top20 {
+   padding-top: 20px !important;
+}
+
+.padding-top25 {
+   padding-top: 25px !important;
+}
+
+.padding-top30 {
+   padding-top: 30px !important;
+}
+
+/* Padding right */
+
+.padding-right2 {
+   padding-right: 2px !important;
+}
+
+.padding-right5 {
+   padding-right: 5px !important;
+}
+
+.padding-right10 {
+   padding-right: 10px !important;
+}
+
+.padding-right15 {
+   padding-right: 15px !important;
+}
+
+.padding-right20 {
+   padding-right: 20px !important;
+}
+
+.padding-right25 {
+   padding-right: 25px !important;
+}
+
+.padding-right30 {
+   padding-right: 30px !important;
+}
+
+/* Padding bottom */
+
+.padding-bottom2 {
+   padding-bottom: 2px !important;
+}
+
+.padding-bottom5 {
+   padding-bottom: 5px !important;
+}
+
+.padding-bottom10 {
+   padding-bottom: 10px !important;
+}
+
+.padding-bottom15 {
+   padding-bottom: 15px !important;
+}
+
+.padding-bottom20 {
+   padding-bottom: 20px !important;
+}
+
+.padding-bottom25 {
+   padding-bottom: 25px !important;
+}
+
+.padding-bottom30 {
+   padding-bottom: 30px !important;
+}
+
+.padding-bottom40 {
+   padding-bottom: 40px !important;
+}
+
+.padding-bottom50 {
+   padding-bottom: 50px !important;
+}
+
+.padding-bottom60 {
+   padding-bottom: 60px !important;
+}
+
+/* Padding left */
+
+.padding-left2 {
+   padding-left: 2px !important;
+}
+
+.padding-left5 {
+   padding-left: 5px !important;
+}
+
+.padding-left10 {
+   padding-left: 10px !important;
+}
+
+.padding-left15 {
+   padding-left: 15px !important;
+}
+
+.padding-left20 {
+   padding-left: 20px !important;
+}
+
+.padding-left25 {
+   padding-left: 25px !important;
+}
+
+.padding-left30 {
+   padding-left: 30px !important;
+}
+
+/* Padding side */
+
+.padding-side5 {
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+}
+
+.padding-side10 {
+   padding-left: 10px !important;
+   padding-right: 10px !important;
+}
+
+.padding-side15 {
+   padding-left: 15px !important;
+   padding-right: 15px !important;
+}
+
+.padding-side20 {
+   padding-left: 20px !important;
+   padding-right: 20px !important;
+}
+
+.padding-side25 {
+   padding-left: 25px !important;
+   padding-right: 25px !important;
+}
+
+/* Padding all */
+.padding-all5 {
+   padding-left: 5px !important;
+   padding-right: 5px !important;
+   padding-top: 5px !important;
+   padding-bottom: 5px !important;
+}
+
+.padding-all10 {
+   padding-left: 10px !important;
+   padding-right: 10px !important;
+   padding-top: 10px !important;
+   padding-bottom: 10px !important;
+}
+
+.padding-all15 {
+   padding-left: 15px !important;
+   padding-right: 15px !important;
+   padding-top: 15px !important;
+   padding-bottom: 15px !important;
+}
+
+/* Padding Remove */
+
+.no-padding {
+   padding: 0px !important;
+}
+
+.no-padding-top {
+   padding-top: 0px !important;
+}
+
+.no-padding-left {
+   padding-left: 0px !important;
+}
+
+.no-padding-bottom {
+   padding-bottom: 0px !important;
+}
+
+.no-padding-right {
+   padding-right: 0px !important;
+}
+
+/* width element */
+
+.width75  { width: 75px; }
+.width100 { width: 100px; }
+.width125 { width: 125px; }
+.width150 { width: 150px; }
+.width175 { width: 175px; }
+.width200 { width: 200px; }
+.width225 { width: 225px; }
+.width250 { width: 250px; }
+.width260 { width: 260px; }
+.width275 { width: 275px; }
+.width300 { width: 300px; }
+
+/* max-width element */
+
+.max-width75  { max-width: 75px; }
+.max-width100 { max-width: 100px; }
+.max-width125 { max-width: 125px; }
+.max-width150 { max-width: 150px; }
+.max-width175 { max-width: 175px; }
+.max-width200 { max-width: 200px; }
+.max-width225 { max-width: 225px; }
+.max-width250 { max-width: 250px; }
+.max-width260 { max-width: 260px; }
+.max-width275 { max-width: 275px; }
+.max-width300 { max-width: 300px; }
+
+/* simple no gatter grid, add row-col to float the grid */
+.row-col {
+   position:relative;
+   &:after, &:before {
+      display:block;
+      content:"";
+      clear:both;
+   }
+   div[class*="col-"] {
+      float:left;
+   }
+}
+
+.col {
+   &-2 {width: 2%;}
+   &-5 {width: 5%;}
+   &-10 {width: 10%;}
+   &-15 {width: 15%;}
+   &-20 {width: 20%;}
+   &-25 {width: 25%;}
+   &-30 {width: 30%;}
+   &-35 {width: 35%;}
+   &-40 {width: 40%;}
+   &-45 {width: 45%;}
+   &-50 {width: 50%;}
+   &-55 {width: 55%;}
+   &-60 {width: 60%;}
+   &-65 {width: 65%;}
+   &-70 {width: 70%;}
+   &-75 {width: 75%;}
+   &-80 {width: 80%;}
+   &-85 {width: 85%;}
+   &-90 {width: 90%;}
+   &-95 {width: 95%;}
+   &-100 {width:100%;}
+   &-half {width:50%;}
+   &-third {width:33.3333%;}
+   &-fourth {width:25%;}
+}
+
+.vr-row {
+   &-10 {height:10px;}
+   &-15 {height:15px;}
+   &-20 {height:20px;}
+   &-25 {height:25px;}
+   &-30 {height:30px;}
+   &-35 {height:35px;}
+   &-40 {height:40px;}
+   &-45 {height:45px;}
+   &-50 {height:50px;}
+   &-55 {height:55px;}
+   &-60 {height:60px;}
+   &-65 {height:65px;}
+   &-70 {height:70px;}
+   &-75 {height:75px;}
+   &-80 {height:80px;}
+   &-85 {height:85px;}
+   &-90 {height:90px;}
+   &-95 {height:95px;}
+   &-100 {height:100px;}
+   &-half {height:50%;}
+   &-third {height:33.3333%;}
+   &-fourth {height:25%;}
+}
